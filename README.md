@@ -28,11 +28,15 @@
     <li>Clone this repository to your local machine:</li>
     <code>git clone https://github.com/your-username/your-repository.git</code>
     <li>Navigate to the project directory:</li>
-    <code>cd your-repository</code>
-    <code>composer install</code>
-    <code>cp .env.example .env</code>
-    <code>php artisan key:generate</code>
-    <code>php artisan migrate</code>
+    <code>cd your-repository</code><br>
+    <li>Install Composer:</li>
+    <code>composer install</code><br>
+    <li>Generate your own .env file:</li>
+    <code>cp .env.example .env</code><br>
+    <li>Genereate key for APP_KEY:</li>
+    <code>php artisan key:generate</code><br>
+    <li>Migrate your tables to database:</li>
+    <code>php artisan migrate</code><br>
 </ol>
 
 ## Running the Application
