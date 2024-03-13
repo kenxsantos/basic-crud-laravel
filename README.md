@@ -29,6 +29,10 @@
     <code>git clone https://github.com/your-username/your-repository.git</code>
     <li>Navigate to the project directory:</li>
     <code>cd your-repository</code>
+    <code>composer install</code>
+    <code>cp .env.example .env</code>
+    <code>php artisan key:generate</code>
+    <code>php artisan migrate</code>
 </ol>
 
 ## Running the Application
