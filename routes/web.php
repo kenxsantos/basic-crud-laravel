@@ -26,7 +26,7 @@ Route::put('/update/{id}', function ($id) {
     return "Updated record with ID: $id";
 });  
 
-Route::delete('/delete/{id}', function () {
+Route::delete('/delete/{id}', function ($id) {
     return "Deleted record with ID: $id";
 });  
 
