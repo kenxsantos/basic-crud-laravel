@@ -13,6 +13,9 @@ use App\Http\Controllers\QrCodeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('home.index');
+});
 
 Route::post('/submit', function () {
     return 'Form submitted successfully!';
@@ -25,6 +28,7 @@ Route::put('/update/{id}', function ($id) {
 Route::delete('/delete/{id}', function ($id) {
     return "Deleted record with ID: $id";
 });  
+
 
 
 Route::resource('/students', StudentController::class);
