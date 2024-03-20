@@ -14,10 +14,6 @@ use App\Http\Controllers\QrCodeController;
 |
 */
 
-Route::get('/', function () {
-    return 'Hello World!';
-});     
-
 Route::post('/submit', function () {
     return 'Form submitted successfully!';
 });  
@@ -30,9 +26,6 @@ Route::delete('/delete/{id}', function ($id) {
     return "Deleted record with ID: $id";
 });  
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::resource('/students', StudentController::class);
 Route::get('/qrcode', [QrCodeController::class, 'index']);

@@ -7,6 +7,11 @@
                     <h5 class="card-title">Name: {{ $students->name }}</h5>
                     <p class="card-text">Address: {{ $students->address }}</p>
                     <p class="card-text">Contact: {{ $students->contact }}</p>
+                    <p class="card-text">Contact: {{ $students->course }}</p>
+                    <p class="card-text">Contact: {{ $students->year }}</p>
+                    <p class="card-text">Contact: {{ $students->section }}</p>
+                    <p class="card-text">Contact: {{ $students->age }}</p>
+
                 </div>
                 <hr>
                 <div class="card">
