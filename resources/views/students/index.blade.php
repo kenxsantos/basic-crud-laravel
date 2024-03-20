@@ -61,7 +61,7 @@
                                             </td>
                                         </tr>
                                     @empty
-                                        <h1>No Registered Students</h1>
+                                        <h1 class="text-center">No Registered Students</h1>
                                     @endforelse
                                 </tbody>
                             </table>

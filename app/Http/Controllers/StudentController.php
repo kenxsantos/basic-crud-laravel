@@ -13,6 +13,11 @@ class StudentController extends Controller
         return view('students.index')->with('students', $students);
     }
 
+    public function indexAPI(){
+        $students = Student::all();
+        return $students;
+    }
+
 
     public function create()
     {
