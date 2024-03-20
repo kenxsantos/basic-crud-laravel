@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\QrCodeController;
@@ -13,9 +14,7 @@ use App\Http\Controllers\QrCodeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::post('/submit', function () {
     return 'Form submitted successfully!';
