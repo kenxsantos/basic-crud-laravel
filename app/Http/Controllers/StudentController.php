@@ -29,29 +29,29 @@ class StudentController extends Controller
 
     public function show(string $id)
     {
-        $student = Student::find($id);
-        return view('students.show')->with('students', $student);
+        $students = Student::find($id);
+        return view('students.show')->with('students', $students);
     }
 
     public function edit(string $id)
     {
-        $student = Student::find($id);
-        return view('students.edit')->with('students', $student);
+        $students = Student::find($id);
+        return view('students.edit')->with('students', $students);
     }
 
     public function update(Request $request, string $id)
     {
-        $student = Student::find($id);
+        $students = Student::find($id);
         $input = $request->all();
-        $student->update($input);
+        $students->update($input);
         return redirect('students')->with('flash_message', 'Student updated successfully');
     }
 
 
     public function destroy(string $id)
     {
-        $student = Student::find($id);
-        $student->delete();
+        $students = Student::find($id);
+        $students->delete();
         return redirect('students')->with('flash_message', 'Student deleted successfully');
     }
 }

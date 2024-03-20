@@ -16,17 +16,17 @@ use App\Http\Controllers\QrCodeController;
 */
 Route::get('/', [HomeController::class, 'index']);
 
-Route::post('/submit', function () {
-    return 'Form submitted successfully!';
-});  
+// Route::post('/submit', function () {
+//     return 'Form submitted successfully!';
+// });  
 
-Route::put('/update/{id}', function ($id) {
-    return "Updated record with ID: $id";
-});  
+// Route::put('/update/{id}', function ($id) {
+//     return "Updated record with ID: $id";
+// });  
 
-Route::delete('/delete/{id}', function ($id) {
-    return "Deleted record with ID: $id";
-});  
+// Route::delete('/delete/{id}', function ($id) {
+//     return "Deleted record with ID: $id";
+// });  
 
 
 

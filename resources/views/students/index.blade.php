@@ -15,58 +15,55 @@
                         <br />
                         <div class="table-responsive">
                             <table class="table">
-                                @forelse($students as $item)
-                                    <thead>
+
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th>Mobile</th>
+                                        <th>Course</th>
+                                        <th>Year Level</th>
+                                        <th>Section</th>
+                                        <th>Age</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse($students as $item)
                                         <tr>
-                                            <th>#</th>
-                                            <th>Name</th>
-                                            <th>Address</th>
-                                            <th>Mobile</th>
-                                            <th>Course</th>
-                                            <th>Year Level</th>
-                                            <th>Section</th>
-                                            <th>Age</th>
-                                            <th>Action</th>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $item->name }}</td>
+                                            <td>{{ $item->address }}</td>
+                                            <td>{{ $item->contact }}</td>
+                                            <td>{{ $item->course }}</td>
+                                            <td>{{ $item->year }}</td>
+                                            <td>{{ $item->section }}</td>
+                                            <td>{{ $item->age }}</td>   
+                                            <td>
+                                                <a href="{{ url('/students/' . $item->id) }}" title="View Student"><button
+                                                        class="btn btn-info btn-sm"><i class="fa fa-eye"
+                                                            aria-hidden="true"></i> View</button></a>
+                                                <a href="{{ url('/students/' . $item->id . '/edit') }}"
+                                                    title="Edit Student"><button class="btn btn-primary btn-sm"><i
+                                                            class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                        Edit</button></a>
+
+                                                <form method="POST" action="{{ url('/students' . '/' . $item->id) }}"
+                                                    accept-charset="UTF-8" style="display:inline">
+                                                    {{ method_field('DELETE') }}
+                                                    {{ csrf_field() }}
+                                                    <button type="submit" class="btn btn-danger btn-sm"
+                                                        title="Delete Student" onclick="return confirm("Confirm
+                                                        delete?")"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                        Delete</button>
+                                                </form>
+                                            </td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($students as $item)
-                                            <tr>
-                                                <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $item->name }}</td>
-                                                <td>{{ $item->address }}</td>
-                                                <td>{{ $item->contact }}</td>
-                                                <td>{{ $item->course }}</td>
-                                                <td>{{ $item->year }}</td>
-                                                <td>{{ $item->section }}</td>
-                                                <td>{{ $item->age }}</td>
-
-
-                                                <td>
-                                                    <a href="{{ url('/students/' . $item->id) }}"
-                                                        title="View Student"><button class="btn btn-info btn-sm"><i
-                                                                class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                                    <a href="{{ url('/students/' . $item->id . '/edit') }}"
-                                                        title="Edit Student"><button class="btn btn-primary btn-sm"><i
-                                                                class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                            Edit</button></a>
-
-                                                    <form method="POST" action="{{ url('/students' . '/' . $item->id) }}"
-                                                        accept-charset="UTF-8" style="display:inline">
-                                                        {{ method_field('DELETE') }}
-                                                        {{ csrf_field() }}
-                                                        <button type="submit" class="btn btn-danger btn-sm"
-                                                            title="Delete Student" onclick="return confirm("Confirm
-                                                            delete?")"><i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                            Delete</button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                @empty
-                                    <h1>No Registered Student</h1>
-                                @endforelse
+                                    @empty
+                                        <h1>No Registered Students</h1>
+                                    @endforelse
+                                </tbody>
                             </table>
                         </div>
 
