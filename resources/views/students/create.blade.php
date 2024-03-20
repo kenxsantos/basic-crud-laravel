@@ -39,7 +39,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="year_level">Year Level:</label>
-                                <input type="text" class="form-control" id="year_level" name="year_level">
+                                <input type="text" class="form-control" id="year_level" name="year">
                             </div>
                             <div class="form-group">
                                 <label for="section">Section:</label>

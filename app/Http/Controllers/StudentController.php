@@ -23,7 +23,7 @@ class StudentController extends Controller
     {
         $input = $request->all();
         Student::create($input);
-        return redirect('student')->with('flash_message', 'Student added successfully');
+        return redirect('students')->with('flash_message', 'Student added successfully');
     }
 
 
@@ -44,13 +44,14 @@ class StudentController extends Controller
         $student = Student::find($id);
         $input = $request->all();
         $student->update($input);
-        return redirect('student')->with('flash_message', 'Student updated successfully');
+        return redirect('students')->with('flash_message', 'Student updated successfully');
     }
 
 
     public function destroy(string $id)
     {
         $student = Student::find($id);
-        return redirect('student')->with('flash_message', 'Student deleted successfully');
+        $student->delete();
+        return redirect('students')->with('flash_message', 'Student deleted successfully');
     }
 }

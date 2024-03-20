@@ -19,44 +19,44 @@
                             </div>
                         @endif
 
-                        <form action="{{ route('students.update', $student->id) }}" method="POST">
+                        <form action="{{ route('students.update', $students->id) }}" method="POST">
                             @csrf
                             @method('PUT')
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control" id="name" name="name"
-                                    value="{{ $student->name }}">
+                                    value="{{ $students->name }}">
                             </div>
                             <div class="form-group">
                                 <label for="address">Address</label>
                                 <input type="text" class="form-control" id="address" name="address"
-                                    value="{{ $student->address }}">
+                                    value="{{ $students->address }}">
                             </div>
                             <div class="form-group">
                                 <label for="contact">Contact</label>
                                 <input type="text" class="form-control" id="contact" name="contact"
-                                    value="{{ $student->contact }}">
+                                    value="{{ $students->contact }}">
                             </div>
                             <!-- New fields -->
                             <div class="form-group">
                                 <label for="course">Course</label>
                                 <input type="text" class="form-control" id="course" name="course"
-                                    value="{{ $student->course }}">
+                                    value="{{ $students->course }}">
                             </div>
                             <div class="form-group">
                                 <label for="year_level">Year Level</label>
                                 <input type="text" class="form-control" id="year_level" name="year_level"
-                                    value="{{ $student->year }}">
+                                    value="{{ $students->year }}">
                             </div>
                             <div class="form-group">
                                 <label for="section">Section</label>
                                 <input type="text" class="form-control" id="section" name="section"
-                                    value="{{ $student->section }}">
+                                    value="{{ $students->section }}">
                             </div>
                             <div class="form-group">
                                 <label for="age">Age</label>
                                 <input type="text" class="form-control" id="age" name="age"
-                                    value="{{ $student->age }}">
+                                    value="{{ $students->age }}">
                             </div>
                             <!-- End of new fields -->
                             <button type="submit" class="btn btn-primary">Update</button>
