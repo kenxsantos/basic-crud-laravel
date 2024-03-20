@@ -18,6 +18,10 @@ class StudentAPIController extends Controller
             'name' => 'required|string|max:255',
             'address' => 'nullable|string|max:255',
             'contact' => 'nullable|string|max:20',
+            'course' => 'required|string|max:255',
+            'year' => 'nullable|string|max:255',
+            'section' => 'nullable|string|max:20',
+            'age' => 'nullable|string|max:255',
         ]);
 
         return Student::create($validatedData);
@@ -36,6 +40,10 @@ class StudentAPIController extends Controller
             'name' => 'required|string|max:255',
             'address' => 'nullable|string|max:255',
             'contact' => 'nullable|string|max:20',
+            'course' => 'required|string|max:255',
+            'year' => 'nullable|string|max:255',
+            'section' => 'nullable|string|max:20',
+            'age' => 'nullable|string|max:255',
         ]);
 
         $student->update($validatedData);

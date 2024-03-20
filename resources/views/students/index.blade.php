@@ -15,7 +15,6 @@
                         <br />
                         <div class="table-responsive">
                             <table class="table">
-
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -66,7 +65,12 @@
                                 </tbody>
                             </table>
                         </div>
-
+                        <h1>Students</h1>
+                        <ul>
+                            @foreach ($students as $student)
+                                <li>{{ $student->name }} - {{ $student->address }}</li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>

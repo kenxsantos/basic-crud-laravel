@@ -10,15 +10,5 @@
                 <i class="fa fa-eye" aria-hidden="true"></i> View Students
             </button>
         </a>
-
-
-        <h1>Students</h1>
-
-        <ul>
-            @foreach ($students as $student)
-                <li>{{ $student->name }} - {{ $student->address }}</li>
-            @endforeach
-        </ul>
-
     </div>
 @endsection

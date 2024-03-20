@@ -19,5 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/weather', [WeatherController::class, 'showWeatherForm'])->name('weather');
-Route::resource('/students', StudentController::class);
+Route::post('/weather', [WeatherController::class, 'showWeatherForm'])->name('weather.index');
+Route::get('/weather/show', [WeatherController::class, 'getWeather'])->name('weather.show');
+Route::get('/students', [StudentController::class, 'indexAPI']);

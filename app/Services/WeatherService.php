@@ -11,7 +11,8 @@ class WeatherService{
     public function __construct()
     {
         $this->client = new Client;
-        $this->apiKey = env('OPENWEATHERMSP_API_KEY');
+        $this->apiKey = env('OPENWEATHERMAP_API_KEY');
+        $this->baseUrl = 'http://api.openweathermap.org/data/2.5';
     }
 
     public function getCurrentWeather($city)

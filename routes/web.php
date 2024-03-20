@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\QrCodeController;
+use App\Http\Controllers\WeatherController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +30,6 @@ Route::get('/', [HomeController::class, 'index']);
 // });  
 
 
-
+// Route::get('/weather', [WeatherController::class, 'showWeatherForm'])->name('weather');
 Route::resource('/students', StudentController::class);
 Route::get('/qrcode', [QrCodeController::class, 'index']);

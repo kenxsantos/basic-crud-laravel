@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Service\WeatherService;
+use App\Services\WeatherService;
 use Illuminate\Http\Request;
 
 class WeatherController extends Controller
@@ -15,13 +15,13 @@ class WeatherController extends Controller
 
     public function showWeatherForm()
     {
-        return view('students.weather');
+        return view('weather.index');
     }
 
     public function getWeather(Request $request)
     {
         $city = $request->input('city');
         $weather = $this->weatherService->getCurrentWeather($city);
-        return view('students.weather', compact('weather', 'city'));
+        return view('weather.show', compact('weather', 'city'));
     }
 }
