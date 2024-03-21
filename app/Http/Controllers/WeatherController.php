@@ -22,6 +22,6 @@ class WeatherController extends Controller
     {
         $city = $request->input('city');
         $weather = $this->weatherService->getCurrentWeather($city);
-        return view('weather.show', compact('weather', 'city'));
+        return view('weather.index', compact('weather', 'city'));
     }
 }

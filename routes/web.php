@@ -15,7 +15,7 @@ use App\Http\Controllers\WeatherController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 // Route::post('/submit', function () {
 //     return 'Form submitted successfully!';
@@ -30,6 +30,5 @@ Route::get('/', [HomeController::class, 'index']);
 // });  
 
 
-// Route::get('/weather', [WeatherController::class, 'showWeatherForm'])->name('weather');
 Route::resource('/students', StudentController::class);
 Route::get('/qrcode', [QrCodeController::class, 'index']);

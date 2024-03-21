@@ -17,7 +17,7 @@ class WeatherService{
 
     public function getCurrentWeather($city)
     {
-        $reponse = $this->client->get("{$this->baseUrl}/weather?q={$city}&appid={$this->apiKey}");
-        return json_decode($response->getBody()->getContent(0), true);
+        $response = $this->client->get("{$this->baseUrl}/weather?q={$city}&appid={$this->apiKey}");
+        return json_decode($response->getBody()->getContents(), true);
     }
 }

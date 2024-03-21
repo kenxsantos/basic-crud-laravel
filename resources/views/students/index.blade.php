@@ -3,6 +3,11 @@
     <div class="container">
         <div class="row" style="margin:20px;">
             <div class="col-12">
+                <div class="mb-3">
+                    <a href="{{ route('home.index') }}" class="btn btn-primary btn-sm" title="Add New Student">
+                        Back
+                    </a>
+                </div>
                 <div class="card">
                     <div class="card-header">
                         <h2>Laravel 9 CRUD (Create, Read, Update and Delete)</h2>
@@ -65,12 +70,6 @@
                                 </tbody>
                             </table>
                         </div>
-                        <h1>Students</h1>
-                        <ul>
-                            @foreach ($students as $student)
-                                <li>{{ $student->name }} - {{ $student->address }}</li>
-                            @endforeach
-                        </ul>
                     </div>
                 </div>
             </div>
