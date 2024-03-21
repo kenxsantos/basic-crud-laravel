@@ -37,6 +37,8 @@
     <code>php artisan key:generate</code><br>
     <li>Migrate your tables to database:</li>
     <code>php artisan migrate</code><br>
+    <li>Add your WeatherAPI Key at .env</li>
+    <code>OPENWEATHERMAP_API_KEY=your_key</code><br>
 </ol>
 
 ## Running the Application
