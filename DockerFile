@@ -1,0 +1,14 @@
+# Base image
+FROM nixos/nix:latest
+
+# Copy the Nix expression file
+COPY .nixpacks/nixpkgs-5148520bfab61f99fd25fb9ff7bfbb50dad3c9db.nix /nixpkgs.nix
+
+# Install packages using Nix and clean up
+RUN echo "Running nix-env command" && \
+    nix-env -if /nixpkgs.nix && \
+    echo "nix-env command completed" && \
+    nix-collect-garbage -d
+
+# Copy the assets directory
+COPY .nixpacks/assets /assets/
